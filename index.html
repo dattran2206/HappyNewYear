@@ -156,6 +156,13 @@
     <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/MyMath.js'></script>
     <script src="script.js"></script>
     <script>
+        document.addEventListener('click', function () {
+            const audio = document.getElementById('myAudio');
+            audio.play().catch(error => {
+                console.error('Error playing audio:', error);
+            });
+        }, { once: true }); // Chỉ kích hoạt một lần
+
         function playAudio() {
             var audio = document.getElementById("myAudio");
 
